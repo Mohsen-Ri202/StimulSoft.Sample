@@ -1,0 +1,23 @@
+﻿@model VendorViewModel
+
+@using Stimulsoft.Report.Mvc
+
+@{
+    ViewData["Title"] = "ShowPrint";
+}
+
+<form asp-action="VendorReport" method="post">
+    <input type="hidden" asp-for="Id" />
+
+</form>
+
+<h1>ShowPrint</h1>
+@Html.StiNetCoreViewer(new StiNetCoreViewerOptions(){
+    Actions={
+        GetReport="VendorReport",
+        ViewerEvent="ViewEvent"         
+    }
+})
+
+
+
