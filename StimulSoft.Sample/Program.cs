@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<NopTestContext>(options =>
+builder.Services.AddDbContext<MyAppDbContext>(options =>
     options.UseSqlServer(connectionString: "Server=.;Database=NopTest;Trusted_Connection=True")
 );
 var app = builder.Build();
