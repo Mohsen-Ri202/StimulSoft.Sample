@@ -26,13 +26,10 @@ namespace StimulSoft.Sample.Controllers
 			return View(model);
 		}
 
-		public IActionResult ShowVendor(int id)
+		public IActionResult ShowVendor()
 		{
-			var model = new Vendor()
-			{
-				Id = id
-			};
-			return View(model);
+			
+			return View();
 		}
 		
 		public IActionResult VendorReport(int id)
